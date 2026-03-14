@@ -60,7 +60,7 @@ export function Header() {
           <ThemeToggle />
 
           {/* Desktop CTA */}
-          <Button className="hidden md:inline-flex" size="lg" render={<a href="#contact" />}>
+          <Button className="hidden md:inline-flex" size="lg" nativeButton={false} render={<a href="#contact" />}>
             Free SEO Audit
             <ArrowRight className="size-4" data-icon="inline-end" />
           </Button>

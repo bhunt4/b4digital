@@ -8,7 +8,6 @@ import { Logo } from "@/components/shared/logo";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -37,21 +36,26 @@ export function MobileNav() {
 
         <nav className="flex flex-col gap-1 px-4 py-6">
           {navLinks.map((link) => (
-            <SheetClose key={link.href} render={<a href={link.href} />}>
-              <span className="flex w-full rounded-md px-3 py-2.5 text-base font-medium text-foreground transition-colors hover:bg-muted">
-                {link.label}
-              </span>
-            </SheetClose>
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="flex w-full rounded-md px-3 py-2.5 text-base font-medium text-foreground transition-colors hover:bg-muted"
+            >
+              {link.label}
+            </a>
           ))}
         </nav>
 
         <div className="mt-auto border-t px-6 py-4">
-          <SheetClose render={<a href="#contact" className="w-full" />}>
-            <Button className="w-full" size="lg">
-              Free SEO Audit
-              <ArrowRight className="size-4" data-icon="inline-end" />
-            </Button>
-          </SheetClose>
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="inline-flex w-full items-center justify-center gap-1.5 rounded-lg bg-primary px-2.5 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80"
+          >
+            Free SEO Audit
+            <ArrowRight className="size-4" />
+          </a>
         </div>
       </SheetContent>
     </Sheet>

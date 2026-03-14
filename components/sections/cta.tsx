@@ -16,6 +16,7 @@ export function CTA() {
           size="lg"
           variant="secondary"
           className="mt-8 text-base"
+          nativeButton={false}
           render={<a href="#contact" />}
         >
           Get Started Today

@@ -92,7 +92,7 @@ export function Footer() {
         {/* Copyright */}
         <div className="mt-12 border-t border-background/10 pt-6 text-center">
           <p className="text-sm text-background/50">
-            &copy; 2024 {siteConfig.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
         </div>
       </div>
