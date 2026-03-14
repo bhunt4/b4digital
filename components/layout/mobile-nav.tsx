@@ -13,7 +13,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 
-export function MobileNav() {
+export function MobileNav({ inverted = false }: { inverted?: boolean }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -22,6 +22,7 @@ export function MobileNav() {
         variant="ghost"
         size="icon"
         aria-label="Open menu"
+        className={inverted ? "text-background hover:text-background/80 hover:bg-background/10" : ""}
         onClick={() => setOpen(true)}
       >
         <Menu className="size-5" />

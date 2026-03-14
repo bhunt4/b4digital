@@ -36,7 +36,7 @@ export function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Logo />
+          <Logo inverted={!scrolled} />
         </Link>
 
         {/* Desktop nav */}
@@ -47,7 +47,9 @@ export function Header() {
               href={link.href}
               className={cn(
                 "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-                "text-muted-foreground hover:text-foreground"
+                scrolled
+                  ? "text-foreground/70 hover:text-foreground"
+                  : "text-background/70 hover:text-background"
               )}
             >
               {link.label}
@@ -57,17 +59,17 @@ export function Header() {
 
         {/* Right side actions */}
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          <ThemeToggle inverted={!scrolled} />
 
           {/* Desktop CTA */}
-          <Button className="hidden md:inline-flex" size="lg" nativeButton={false} render={<a href="#contact" />}>
+          <Button className={cn("hidden md:inline-flex", !scrolled && "bg-background text-foreground hover:bg-background/90")} size="lg" nativeButton={false} render={<a href="#contact" />}>
             Free SEO Audit
             <ArrowRight className="size-4" data-icon="inline-end" />
           </Button>
 
           {/* Mobile nav */}
           <div className="md:hidden">
-            <MobileNav />
+            <MobileNav inverted={!scrolled} />
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
-export function Logo() {
+export function Logo({ inverted = false }: { inverted?: boolean }) {
   return (
     <span className="text-xl font-bold tracking-tight">
-      B4<span className="text-primary">Digital</span>
+      <span className={inverted ? "text-background" : "text-foreground"}>B4</span>
+      <span className="text-primary">Digital</span>
     </span>
   );
 }
