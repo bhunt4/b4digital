@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 # Project Overview
 
-<!-- TODO: Describe your project in 1-2 sentences. What does it do? What is its purpose? -->
+B4Digital is a marketing website for a digital agency. Built with Next.js, deployed on Vercel.
+
+**Repository:** `https://github.com/bhunt4/b4digital` (owner: bhunt4, collaborator: Luke/ekul1988)
 
 ---
 
@@ -29,13 +31,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 # Technology Stack
 
-<!-- TODO: List your core technologies. Example: -->
-
-# Framework:
-# Language:
-# Styling:
-# UI Library:
-# Database:
+Framework: Next.js 15 (App Router)
+Language: TypeScript
+Styling: Tailwind CSS
+UI Library: shadcn/ui (Radix primitives)
 
 ---
 
